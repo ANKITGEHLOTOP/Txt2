@@ -295,7 +295,8 @@ async def getcookies_handler(client: Client, m: Message):
             caption="Here is the `main.py` file."
         )
     except Exception as e:
-        reply = await m.reply_text(f"<blockquote><b>Generate Thumbnail:</b></blockquote>\n{name}")
+        reply = await m.reply_text(f"<blockquote><b>GenerateThumbnail:</b></blockquote>\n{name}")
+        
 @bot.on_message(filters.command(["stop"]) )
 async def restart_handler(_, m):
     if m.chat.id not in AUTH_USERS:
